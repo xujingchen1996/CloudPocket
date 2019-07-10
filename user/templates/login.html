@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>登录</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <a href="{% url 'user:mainpage' %}">回到主页</a>
+    {{ errmsg }}
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button type="submit">登录</button>
+</form>
+</body>
+</html>

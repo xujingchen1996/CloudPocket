@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+</head>
+<body>
+<h1>个人中心</h1>
+<a href="{% url 'user:logoutView' %}">登出</a>
+<a href="{% url 'user:edit_profile' %}">编辑个人信息</a>
+<a href="{% url 'user:change_password' %}">修改密码</a>
+<div>
+    <p>{{ user.username }}</p>
+    <p>{{ user.email }}</p>
+    <p>{{ user.commonuser.nickname }}</p>
+    <p>{{ user.commonuser.birthday }}</p>
+</div>
+</body>
+</html>
